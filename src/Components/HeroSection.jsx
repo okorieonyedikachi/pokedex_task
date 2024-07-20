@@ -1,13 +1,15 @@
 import React from 'react'
 import '../styles/heroSection.css'
-// import heroImage from "../assets/hero-image.jpeg"
+import background from '../assets/_.jpeg'
 
 const HeroSection = () => {
   return (
-    <div className='container'>
-        <h1>Pokedex</h1>
+    <div className='container' >
+        <img src={background} className='image'/>
     </div>
   )
 }
 
 export default HeroSection
+
+// style={{backgroundImage: `url(${background})` }}

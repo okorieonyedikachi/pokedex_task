@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './styles/App.css'
 import HeroSection from './Components/HeroSection'
 import Card from './Components/Card'
-import CardWrapper from './Components/CardWrapper'
+import CardList from './Components/CardList'
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className='main-wrapper'>
      <HeroSection/>
-     <CardWrapper/>
+     <CardList/>
      </div>
   )
 }
