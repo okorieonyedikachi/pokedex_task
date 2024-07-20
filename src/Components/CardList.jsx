@@ -8,13 +8,13 @@ const CardList = () => {
         <input id='search-input' placeholder='Enter Pokemon name ...'/>
         <div className='card-wrapper'>
             <Card/>
-            {/* <Card/>
             <Card/>
             <Card/>
             <Card/>
             <Card/>
             <Card/>
-            <Card/> */}
+            <Card/>
+            <Card/>
         </div>
     </div>
   )

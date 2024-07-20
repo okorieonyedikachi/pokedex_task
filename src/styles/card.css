@@ -65,10 +65,10 @@ img {
 
 @media only screen and (max-width: 1024px) {
     .hovered{
-        font-size: 10px;
-       background-color: red;
-       height: 30%;
-       top: 0;
-       bottom: 0;
+    font-size: 10px;
+    height: 30%;
     z-index: 1;    }
+    .character-name{
+        word-break: break-word;
+    }
 }

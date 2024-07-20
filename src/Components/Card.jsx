@@ -11,6 +11,7 @@ useState
       className='card-container'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={()=>console.log(true)}
     >
       <div className="text">
         <span id="number">#1</span>
@@ -22,8 +23,9 @@ useState
       {isHovered && (
         <div className="hovered">
          <p className='character-name'>Crabominable</p>
-         <p>Weight: 40</p>
+         <p>Weight: 40kg</p>
          <p>Height: 65</p>
+         <p>Type: Fire</p>
         </div>
       )}
     </div>
