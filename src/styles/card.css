@@ -15,7 +15,7 @@
 
 }
 
-img {
+.pokemon-image  {
     width: 70%; 
      margin: auto; 
 }
@@ -52,11 +52,12 @@ img {
     background-color: orange;
     position: absolute;
     z-index: 20;
-    width: 100%;
+    width: 97%;
     height: 50%;
     cursor: pointer;
     color: white;
     font-size: 19px;
+    padding-left: 10px;
 }
 
 .card-hover {
