@@ -1,10 +1,10 @@
 
 import "../styles/card.css";
-import pokemon from "../assets/Eevee _ Pokemon.jpeg";
+import pokemonPhoto from "../assets/Eevee _ Pokemon.jpeg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Card = () => {
+const Card = ({pokemonName}) => {
    const navigate = useNavigate()
 
    const navigateToDetailsPage = ()=>{
@@ -25,11 +25,11 @@ useState
         
       </div>
       <div className={`image-container ${isHovered ?'card-hover' : ''}`}>
-        <img src={pokemon} />
+        <img src={pokemonPhoto} className="pokemon-image"/>
       </div>
       {isHovered && (
         <div className="hovered">
-         <p className='character-name'>Crabominable</p>
+         <p className='character-name'>{pokemonName}</p>
          <p>Weight: 40kg</p>
          <p>Height: 65</p>
          <p>Type: Fire</p>
