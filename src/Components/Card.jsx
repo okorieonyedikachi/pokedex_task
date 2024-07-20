@@ -2,16 +2,23 @@
 import "../styles/card.css";
 import pokemon from "../assets/Eevee _ Pokemon.jpeg";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Card = () => {
+   const navigate = useNavigate()
+
+   const navigateToDetailsPage = ()=>{
+    navigate('/pokemondetails')
+   }
+
   const [isHovered, setIsHovered] = useState(false);
 useState
   return (
-    <div
+   <div
       className='card-container'
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={()=>console.log(true)}
+      onClick={navigateToDetailsPage}
     >
       <div className="text">
         <span id="number">#1</span>
