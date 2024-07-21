@@ -10,8 +10,9 @@
     width: 60%;
     padding : 15px;
     border-radius: 10px;
-    font-size: 18px;
+    font-size: 20px;
     border-color: orange;
+    
 }
 
 .card-wrapper {
@@ -19,8 +20,9 @@
     display: flex;
     flex-wrap: wrap;
     width: 90%;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 40px;
+    color: ornage;
 }
 
 .pagination-wrapper {  
