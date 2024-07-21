@@ -1,10 +1,15 @@
-import Home from "./components/Home"
+import React from 'react'
+import './styles/App.css'
+import CardList from './components/CardList'
+import HeroSection from './components/HeroSection'
+
 
 function App() {
   return (
-    <div>
-    <Home/>
-     </div>
+    <div  className='main-wrapper'> 
+    <HeroSection/>
+    <CardList/>
+   </div>
   )
 }
 
