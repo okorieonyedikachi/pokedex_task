@@ -12,11 +12,6 @@ const Home = () => {
   return (
     <div  className='main-wrapper'> <HeroSection/>
     <CardList/>
-    {/* {pokemon.map((item)=> {
-        return (
-            // <CardList item= {item}/> 
-        )
-})} */}
   </div>
   )
 }

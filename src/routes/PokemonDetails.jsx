@@ -5,15 +5,6 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { POKEMON_API_URL } from "../constants";
 
-const PokemonImage = () => {
-  return (
-    <div className="sub-imagesContainer">
-      {[1, 2, 3, 4].map((endpoint, id) => (
-        <img src={endpoint.name} className="sub-images" />
-      ))}
-    </div>
-  );
-};
 
 const PokemonDetails = () => {
   const { name } = useParams();
@@ -31,6 +22,8 @@ const PokemonDetails = () => {
 
     fetchPokemonDetail();
   }, [name]);
+
+
 
   // to change an object to an array and filter just string
 
@@ -55,7 +48,7 @@ const PokemonDetails = () => {
           </div>
           <div className="detail-text">
             <div className="text-wrapper">
-              <p>Ability:</p>
+              <p>ABILITY:</p>
               <ul className="detail-list">
                 {pokemon.abilities?.map((item, index) => {
                   return <li key={index}>{item?.ability?.name}</li>;
@@ -63,20 +56,20 @@ const PokemonDetails = () => {
               </ul>
             </div>
             <div className="text-wrapper">
-              <p>Weight:</p>
-              <span>{pokemon?.weight}kg</span>
+              <p>WEIGTH:</p>
+              <span>{pokemon?.weight} kg</span>
             </div>
             <div className="text-wrapper">
-              <p>Height:</p>
-              <span>{pokemon?.height}cm</span>
+              <p>HEIGHT:</p>
+              <span>{pokemon?.height}</span>
             </div>
-            <div className="text-wrapper">
-              <p>Stats:</p>
+            <div className="stat-wrapper">
+              <p>STATS:</p>
               <ul className="ul">
                 {pokemon.stats?.map((item, index) => {
                   return (
                     <li key={index} className="list">
-                      {item?.stat?.name}: <span>{item?.base_stat} </span>
+                      {item?.stat?.name}: <span className="stat-list">{item?.base_stat} </span>
                     </li>
                   );
                 })}

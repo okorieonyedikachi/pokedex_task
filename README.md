@@ -1,8 +1,47 @@
-# React + Vite
+# Pokémon React Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple Pokémon application built with React and powered by the PokéAPI. The application displays a list of Pokémon and allows users to view detailed information about each Pokémon by clicking on it. It also includes pagination and search functionality.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **List Page**: Displays a paginated list of Pokémon.
+- **Detail Page**: Shows detailed information about a selected Pokémon, including its abilities, weight, height, stats, and sprites.
+- **Search**: Allows users to search for Pokémon by name.
+- **Pagination**: Allows users to navigate between pages of Pokémon.
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **Axios**: A promise-based HTTP client for making API requests.
+- **React Router**: A collection of navigational components for React applications.
+- **PokéAPI**: An API providing data about Pokémon.
+
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+### Prerequisites
+
+- Node.js (version 12 or higher)
+- npm (version 6 or higher)
+
+### Installation
+
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/okorieonyedikachi/pokedex_task
+    ```
+2. **Navigate to the project directory**:
+    ```sh
+    cd pokemon-react-app
+    ```
+3. **Install dependencies**:
+    ```sh
+    yarn 
+    ```
+
+### Running the Application
+
+To start the development server, run:
+```sh
+npm start

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import "../styles/cardWrapper.css";
 import Card from "./Card";
 import axios from "axios";
@@ -11,50 +11,80 @@ const CardList = ({item}) => {
   const [currentUrl, setCurrentUrl] = useState(POKEMON_API_URL);
   const [nextUrl, setNextUrl] = useState();
   const [prevUrl, setPrevUrl] = useState();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   
   
   
    useEffect(() => {
       const fetchPokemonData = async () => {
+        setLoading(true)
         try {
-          const response = await axios.get('https://pokeapi.co/api/v2/pokemon');
+          const response = await axios.get(currentUrl);
           const data = await response.data.results;
           setPokemon(data);
+          setNextUrl(response.data.next)
+          setPrevUrl(response.data.previous)
+          setLoading(false)
         } catch (error) {
+          setLoading(false)
+          setError(true);
           console.error('Error fetching Pokemon data:', error);
         }
       };
       fetchPokemonData();
-    }, []);
+    }, [currentUrl]);
     
-  // console.log(pokemon)
+    const renderContent = () => {
+      if (loading) {
+        return <h1>Loading...</h1>;
+      }
   
-  const filteredPokemon = pokemon.filter(poke =>
-    poke.name.toLowerCase().includes(searchField)
-  );
+      if (error) {
+        return <h1>Error loading data: {error.message}</h1>;
+      }
 
+      if (!loading && !error )
+      {
+        return (
+   
+          <div className="mainContainer">
+            <input id="search-input" placeholder="Enter Pokemon name ..." value={searchField} onChange={(e)=> setSearchField(e.target.value)}/>
+            <div className="card-wrapper">
+              <Card pokemon={filteredPokemon}/>
+            </div>
+            <div className="pagination-wrapper">
+              {prevUrl && <button
+                className="button"
+                onClick={()=> setCurrentUrl(prevUrl)}
+              >
+                Prev
+              </button>}
+               {nextUrl && <button
+                className="button" 
+                onClick={()=> {
+                  setCurrentUrl(nextUrl)
+                }}
+              >
+                Next
+              </button>}
+            </div>
+          </div>
+        );
+      }
+
+    }
+  const filteredPokemon =
+  useMemo(() => 
+  pokemon.filter(poke =>
+    poke.name.toLowerCase().includes(searchField)
+  )
+  )
 
   return (
-   
-    <div className="mainContainer">
-      <input id="search-input" placeholder="Enter Pokemon name ..." value={searchField} onChange={(e)=> setSearchField(e.target.value)}/>
-      <div className="card-wrapper">
-        <Card pokemon={filteredPokemon}/>
-      </div>
-      <div className="pagination-wrapper">
-        <button
-          className="button"
-        >
-          Prev
-        </button>
-         <button
-          className="button" 
-        >
-          Next
-        </button>
-      </div>
-    </div>
+    <>
+    { renderContent()}
+    </>
   );
 };
 
