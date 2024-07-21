@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/App.css'
-import CardList from '../components/CardList.jsx'
-import HeroSection from '../components/HeroSection.jsx'
+import CardList from './CardList.jsx'
+import HeroSection from './HeroSection.jsx'
 
 
 
