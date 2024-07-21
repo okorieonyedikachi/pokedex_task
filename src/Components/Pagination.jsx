@@ -1,12 +1,26 @@
-import React from 'react'
-import '../styles/pagination.css'
-const Pagination = () => {
-  return (
-    <div className='pagination-wrapper'>
-        <div className='button'>Prev</div>
-        <div className='button'>Next</div>
-    </div>
-  )
-}
+// import React from "react";
+// import "../styles/pagination.css";
+// const Pagination = ({ prevButtonclick, nextButtonclick }) => {
+//   return (
+//     <div className="pagination-wrapper">
+//       <button
+//         className="button"
+//         onClick={() => {
+//           prevButtonclick;
+//         }}
+//       >
+//         Prev
+//       </button>
+//       <div
+//         className="button"
+//         onClick={() => {
+//           nextButtonclick;
+//         }}
+//       >
+//         Next
+//       </div>
+//     </div>
+//   );
+// };
 
-export default Pagination
+// export default Pagination;
