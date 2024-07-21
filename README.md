@@ -23,7 +23,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 ### Prerequisites
 
 - Node.js (version 12 or higher)
-- npm (version 6 or higher)
+- yarn
 
 ### Installation
 
@@ -33,7 +33,7 @@ Follow these instructions to get a copy of the project up and running on your lo
     ```
 2. **Navigate to the project directory**:
     ```sh
-    cd pokemon-react-app
+    cd pokedex_task
     ```
 3. **Install dependencies**:
     ```sh
@@ -44,4 +44,4 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 To start the development server, run:
 ```sh
-npm start
+yarn dev
