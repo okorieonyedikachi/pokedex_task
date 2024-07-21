@@ -1,4 +1,3 @@
-
 import '../styles/heroSection.css';
 import background from '../assets/_.jpeg';
 
@@ -10,4 +9,4 @@ const HeroSection = () => {
   )
 }
 
-export default HeroSection
+export default HeroSection;
