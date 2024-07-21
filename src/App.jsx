@@ -6,6 +6,7 @@ import HeroSection from './Components/HeroSection'
 import Card from './Components/Card'
 import CardList from './Components/CardList'
 
+
 function App() {
 
 
@@ -13,6 +14,7 @@ function App() {
     <div className='main-wrapper'>
      <HeroSection/>
      <CardList/>
+   
      </div>
   )
 }
