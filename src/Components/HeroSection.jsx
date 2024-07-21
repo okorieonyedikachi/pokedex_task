@@ -1,5 +1,4 @@
 
-import React from 'react'
 import '../styles/heroSection.css';
 import background from '../assets/_.jpeg';
 
