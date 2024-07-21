@@ -4,12 +4,11 @@ import CardList from '../components/CardList'
 import HeroSection from '../components/HeroSection'
 
 
-const Home = () => {
 
-  
+const Home = () => {
   return (
     <div  className='main-wrapper'> 
-    <HeroSection/>
+   <HeroSection/>
     <CardList/>
   </div>
   )
